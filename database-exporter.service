@@ -1,0 +1,10 @@
+[Unit]
+Description = Automatically dump selected databases
+
+[Service]
+WorkingDirectory = $HOME/database-exporter
+ExecStart = node app.js
+Restart = always
+
+[Install]
+WantedBy=multi-user.target
